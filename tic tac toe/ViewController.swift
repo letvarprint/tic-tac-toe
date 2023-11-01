@@ -13,6 +13,10 @@ final class ViewController: UIViewController {
     @IBOutlet weak var playerTwoLabel: UILabel!
     @IBOutlet weak var playerTurnLabel: UILabel!
     
+    
+    
+    
+    
     @IBOutlet weak var b11ImageView: UIImageView!
     @IBOutlet weak var b12ImageView: UIImageView!
     @IBOutlet weak var b21ImageView: UIImageView!
