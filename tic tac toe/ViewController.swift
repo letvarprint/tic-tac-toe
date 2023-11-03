@@ -16,7 +16,10 @@ final class ViewController: UIViewController {
     private var boardState = [Player?](repeating: nil, count: 9)
     
     override func viewDidLoad() {
-        
+        for button in buttons {
+            button.layer.borderWidth = 3.0
+            button.layer.borderColor = UIColor.black.cgColor 
+        }
     }
     
     @IBAction func Button(_ sender: UIButton) {
@@ -55,7 +58,6 @@ final class ViewController: UIViewController {
             x?.isHidden = false
             o?.isHidden = false
             
-            button.alpha = 0
             button.isUserInteractionEnabled = false
             
             let isXNotNil = x != nil
