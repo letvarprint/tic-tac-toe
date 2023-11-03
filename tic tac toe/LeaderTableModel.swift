@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Leader {
+    let nickname: String
+    let score: Int
+}
