@@ -1,6 +1,6 @@
 import UIKit
 
-final class ViewController: UIViewController {
+final class GameViewController: UIViewController {
     
     @IBOutlet weak var playerOneLabel: UILabel!
     @IBOutlet weak var playerTwoLabel: UILabel!
@@ -45,14 +45,6 @@ final class ViewController: UIViewController {
             showAlert(with: "Draw", and: "Game is over")
         }
     }
-    
-        private func standardFont() -> UIFont {
-            UIFont.systemFont(ofSize: 16)
-        }
-        
-        private func boldFont() -> UIFont {
-            UIFont.boldSystemFont(ofSize: 16)
-        }
         
         private func takeTurn(x: UIView? = nil, o: UIView? = nil, button: UIButton) {
             x?.isHidden = false
@@ -62,8 +54,6 @@ final class ViewController: UIViewController {
             
             let isXNotNil = x != nil
             
-            playerOneLabel.font = isXNotNil ? standardFont() : boldFont()
-            playerTwoLabel.font = !isXNotNil ? boldFont() : standardFont()
             playerTurnLabel.text = isXNotNil ? "Ход Player 2" : "Ход Player 1"
             playerTurnLabel.textColor = isXNotNil ? UIColor.systemBlue : UIColor.red
             currentPlayer = isXNotNil ? .player2 : .player1
