@@ -11,3 +11,9 @@ struct ChoiсePlayer {
     let playerOne: String
     let playerTwo: String
 }
+
+extension ChoiсePlayer {
+    private func getPlayers() -> ChoiсePlayer {
+        ChoiсePlayer(playerOne: "", playerTwo: "")
+    }
+}

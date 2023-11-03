@@ -8,9 +8,15 @@
 import Foundation
 
 struct GameModel {
-    let playerOne: String
-    let playerTwo: String
+    let playerOne: ChoiсePlayer
+    let playerTwo: ChoiсePlayer
     let playerCrossImage: String
     let playerRingImage: String
     let currentMove: String
+}
+
+extension GameModel {
+    private func getModel() -> GameModel {
+        GameModel(playerOne: <#T##ChoiсePlayer#>, playerTwo: <#T##ChoiсePlayer#>, playerCrossImage: <#T##String#>, playerRingImage: <#T##String#>, currentMove: <#T##String#>)
+    }
 }
