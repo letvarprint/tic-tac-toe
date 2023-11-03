@@ -76,7 +76,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3e4-rv-ymD">
                                         <rect key="frame" x="0.0" y="0.0" width="136.66666666666666" height="466"/>
                                         <subviews>
-                                            <button opaque="NO" alpha="0.0" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wH9-No-sw0">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wH9-No-sw0" userLabel="Button One">
                                                 <rect key="frame" x="0.0" y="0.0" width="136.66666666666666" height="155.33333333333334"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -208,6 +208,7 @@
                                 <rect key="frame" x="340.66666666666669" y="94.333333333333329" width="57.666666666666686" height="42.333333333333329"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tuh-PK-lME" secondAttribute="height" multiplier="50:37" id="NB7-lr-FW1"/>
+                                    <constraint firstAttribute="width" secondItem="tuh-PK-lME" secondAttribute="height" multiplier="50:37" id="UqL-O6-T7E"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -244,7 +245,6 @@
                             <constraint firstItem="CG5-0F-fe8" firstAttribute="width" secondItem="Gzj-tx-qql" secondAttribute="height" multiplier="89:149" id="QBM-wo-lJ0"/>
                             <constraint firstItem="2Xl-EY-FPU" firstAttribute="width" secondItem="qYR-zV-NVS" secondAttribute="height" multiplier="0.6" id="RUR-zI-TPa"/>
                             <constraint firstItem="2h5-Xw-E0g" firstAttribute="centerX" secondItem="hMh-hW-uMr" secondAttribute="centerX" id="StA-xG-Awh"/>
-                            <constraint firstItem="tuh-PK-lME" firstAttribute="width" secondItem="tuh-PK-lME" secondAttribute="height" multiplier="50:37" id="UqL-O6-T7E"/>
                             <constraint firstItem="dpO-Za-let" firstAttribute="centerX" secondItem="qNh-Yl-d5D" secondAttribute="centerX" id="Vh0-bh-qC2"/>
                             <constraint firstItem="DSQ-mD-rX2" firstAttribute="centerX" secondItem="cd1-gu-Z0O" secondAttribute="centerX" id="VuK-1R-QhR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9AG-c2-3x0" secondAttribute="trailing" constant="30" id="Vxo-TR-Ct5"/>
@@ -290,36 +290,36 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="b11ImageView" destination="PeC-h6-SKQ" id="jtY-kG-Oaa"/>
-                        <outlet property="b12ImageView" destination="eHE-F4-bCv" id="9AN-Ua-KQK"/>
-                        <outlet property="b21ImageView" destination="Vza-Sx-rBI" id="kQq-Ic-wJ8"/>
-                        <outlet property="b22ImageView" destination="dpO-Za-let" id="oXH-TT-vNl"/>
-                        <outlet property="b31ImageView" destination="CG5-0F-fe8" id="XQX-bp-iSa"/>
-                        <outlet property="b32ImageView" destination="e82-PM-LT3" id="LhD-Pa-G6J"/>
-                        <outlet property="b41ImageView" destination="OSJ-QZ-wwO" id="Tg5-Ni-eMb"/>
-                        <outlet property="b42ImageView" destination="eiI-lb-K7I" id="wC5-VZ-2SQ"/>
-                        <outlet property="b51ImageView" destination="wvF-CT-j3z" id="hCf-SG-uMM"/>
-                        <outlet property="b52ImageView" destination="rR5-0L-RG1" id="iAL-Yg-LMq"/>
-                        <outlet property="b61ImageView" destination="38T-Mg-1A6" id="tha-CE-OcT"/>
-                        <outlet property="b62ImageView" destination="el1-ux-HTW" id="yf7-wi-AQe"/>
-                        <outlet property="b71ImageView" destination="Ibq-jr-pNK" id="imU-xO-LcI"/>
-                        <outlet property="b72ImageView" destination="DSQ-mD-rX2" id="Hi9-JM-2Nq"/>
-                        <outlet property="b81ImageView" destination="86K-Lv-VcI" id="Jpd-r8-wGx"/>
-                        <outlet property="b82ImageView" destination="2h5-Xw-E0g" id="8UL-v4-isd"/>
-                        <outlet property="b91ImageView" destination="2Xl-EY-FPU" id="Pl8-ev-uvH"/>
-                        <outlet property="b92ImageView" destination="fLu-xv-okh" id="Vsx-Mi-54l"/>
-                        <outlet property="eightButton" destination="hMh-hW-uMr" id="NVo-0V-OmQ"/>
-                        <outlet property="fiveButton" destination="pIn-3U-Ci0" id="dly-7U-hTh"/>
-                        <outlet property="fourButton" destination="u5o-pw-h9b" id="1mW-S9-a6Q"/>
-                        <outlet property="nineButton" destination="qYR-zV-NVS" id="KfN-L7-qOQ"/>
-                        <outlet property="oneButton" destination="wH9-No-sw0" id="iyV-6X-p6h"/>
                         <outlet property="playerOneLabel" destination="gUi-5q-yWy" id="ePC-49-3qg"/>
                         <outlet property="playerTurnLabel" destination="FfX-P3-tfP" id="01C-KF-nII"/>
                         <outlet property="playerTwoLabel" destination="9AG-c2-3x0" id="r2o-Et-oaO"/>
-                        <outlet property="sevenButton" destination="cd1-gu-Z0O" id="ccJ-Na-hfi"/>
-                        <outlet property="sixButton" destination="Rui-8B-TaW" id="ObR-0e-QLU"/>
-                        <outlet property="threeButton" destination="Gzj-tx-qql" id="Sbl-tA-ape"/>
-                        <outlet property="twoButton" destination="qNh-Yl-d5D" id="G5e-Jc-xCG"/>
+                        <outletCollection property="xImageViews" destination="PeC-h6-SKQ" collectionClass="NSMutableArray" id="ztC-34-iCl"/>
+                        <outletCollection property="xImageViews" destination="Vza-Sx-rBI" collectionClass="NSMutableArray" id="CBg-4d-ZDT"/>
+                        <outletCollection property="xImageViews" destination="CG5-0F-fe8" collectionClass="NSMutableArray" id="cep-sc-rNY"/>
+                        <outletCollection property="xImageViews" destination="OSJ-QZ-wwO" collectionClass="NSMutableArray" id="Ccj-t3-uWa"/>
+                        <outletCollection property="xImageViews" destination="wvF-CT-j3z" collectionClass="NSMutableArray" id="Qqb-xA-6dP"/>
+                        <outletCollection property="xImageViews" destination="38T-Mg-1A6" collectionClass="NSMutableArray" id="5L6-sZ-Rhy"/>
+                        <outletCollection property="xImageViews" destination="Ibq-jr-pNK" collectionClass="NSMutableArray" id="pZF-VR-5jt"/>
+                        <outletCollection property="xImageViews" destination="86K-Lv-VcI" collectionClass="NSMutableArray" id="H8g-Lj-v0u"/>
+                        <outletCollection property="xImageViews" destination="2Xl-EY-FPU" collectionClass="NSMutableArray" id="Eyw-tC-zML"/>
+                        <outletCollection property="oImageViews" destination="eHE-F4-bCv" collectionClass="NSMutableArray" id="iMJ-n1-ILc"/>
+                        <outletCollection property="oImageViews" destination="dpO-Za-let" collectionClass="NSMutableArray" id="iFF-ly-Iro"/>
+                        <outletCollection property="oImageViews" destination="e82-PM-LT3" collectionClass="NSMutableArray" id="qp5-dI-Blm"/>
+                        <outletCollection property="oImageViews" destination="eiI-lb-K7I" collectionClass="NSMutableArray" id="4GG-hw-SLU"/>
+                        <outletCollection property="oImageViews" destination="rR5-0L-RG1" collectionClass="NSMutableArray" id="kQV-kb-6JX"/>
+                        <outletCollection property="oImageViews" destination="el1-ux-HTW" collectionClass="NSMutableArray" id="sIu-vy-3Rq"/>
+                        <outletCollection property="oImageViews" destination="DSQ-mD-rX2" collectionClass="NSMutableArray" id="JwS-7n-Rt3"/>
+                        <outletCollection property="oImageViews" destination="2h5-Xw-E0g" collectionClass="NSMutableArray" id="QJ5-fj-Rjh"/>
+                        <outletCollection property="oImageViews" destination="fLu-xv-okh" collectionClass="NSMutableArray" id="g7d-7R-Nmf"/>
+                        <outletCollection property="buttons" destination="wH9-No-sw0" collectionClass="NSMutableArray" id="gn7-ei-T6V"/>
+                        <outletCollection property="buttons" destination="qNh-Yl-d5D" collectionClass="NSMutableArray" id="Edl-M0-wJw"/>
+                        <outletCollection property="buttons" destination="Gzj-tx-qql" collectionClass="NSMutableArray" id="PMH-i6-ogU"/>
+                        <outletCollection property="buttons" destination="u5o-pw-h9b" collectionClass="NSMutableArray" id="Z4h-Lf-2Dv"/>
+                        <outletCollection property="buttons" destination="pIn-3U-Ci0" collectionClass="NSMutableArray" id="oVO-We-7Eo"/>
+                        <outletCollection property="buttons" destination="Rui-8B-TaW" collectionClass="NSMutableArray" id="9IM-4E-uKY"/>
+                        <outletCollection property="buttons" destination="cd1-gu-Z0O" collectionClass="NSMutableArray" id="JbN-eN-Ai6"/>
+                        <outletCollection property="buttons" destination="hMh-hW-uMr" collectionClass="NSMutableArray" id="w4I-6d-FZI"/>
+                        <outletCollection property="buttons" destination="qYR-zV-NVS" collectionClass="NSMutableArray" id="g1u-wI-kPN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -331,13 +331,13 @@
         <image name="Image-3" width="619" height="620"/>
         <image name="Image-4" width="687" height="679"/>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

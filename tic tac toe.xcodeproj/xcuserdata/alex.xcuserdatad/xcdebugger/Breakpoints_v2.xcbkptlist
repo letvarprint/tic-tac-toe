@@ -14,8 +14,8 @@
             filePath = "tic tac toe/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "Button(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "tic tac toe/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "Button(_:)"
             landmarkType = "7">
          </BreakpointContent>
