@@ -38,7 +38,7 @@ final class ViewController: UIViewController {
             showAlert(with: "Player 1 wins", and: "Game is over")
         } else if checkForWinner() == .player2 {
             showAlert(with: "Player 2 wins", and: "Game is over")
-        } else if boardIsFull() {
+        } else if checkBoardIsFull() {
             showAlert(with: "Draw", and: "Game is over")
         }
     }
@@ -86,7 +86,7 @@ final class ViewController: UIViewController {
         return nil
         }
     
-    private func boardIsFull() -> Bool {
+    private func checkBoardIsFull() -> Bool {
         if !boardState.contains(nil) {
             return true
         } else {
