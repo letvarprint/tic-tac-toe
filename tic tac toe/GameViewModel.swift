@@ -15,6 +15,12 @@ struct GameModel {
     let currentMove: String
 }
 
-extension GameModel {
+struct ChoiсePlayer {
+    let playerOne: String
+    let playerTwo: String
+}
 
+struct LeaderBoard {
+    let nickname: String
+    let score: Int
 }
