@@ -11,7 +11,7 @@
 		518F653B2AF6DA2B0065C39B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518F653A2AF6DA2B0065C39B /* FirstViewController.swift */; };
 		518F653D2AF6DA590065C39B /* FirstLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518F653C2AF6DA590065C39B /* FirstLoginViewController.swift */; };
 		C58301552AF6E10200C52F80 /* LeaderBoardListVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58301542AF6E10200C52F80 /* LeaderBoardListVC.storyboard */; };
-		C58301572AF6E25500C52F80 /* LeaderBoardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58301562AF6E25500C52F80 /* LeaderBoardTableViewController.swift */; };
+		C58301592AF6E90A00C52F80 /* LeaderBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58301582AF6E90A00C52F80 /* LeaderBoardViewController.swift */; };
 		C5C49E182AF55BC2003EB437 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C49E172AF55BC2003EB437 /* GameViewModel.swift */; };
 		FABEAF4C2AF1CA8F0030F754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABEAF4B2AF1CA8F0030F754 /* AppDelegate.swift */; };
 		FABEAF4E2AF1CA8F0030F754 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABEAF4D2AF1CA8F0030F754 /* SceneDelegate.swift */; };
@@ -26,7 +26,7 @@
 		518F653A2AF6DA2B0065C39B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		518F653C2AF6DA590065C39B /* FirstLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoginViewController.swift; sourceTree = "<group>"; };
 		C58301542AF6E10200C52F80 /* LeaderBoardListVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LeaderBoardListVC.storyboard; sourceTree = "<group>"; };
-		C58301562AF6E25500C52F80 /* LeaderBoardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardTableViewController.swift; sourceTree = "<group>"; };
+		C58301582AF6E90A00C52F80 /* LeaderBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewController.swift; sourceTree = "<group>"; };
 		C5C49E172AF55BC2003EB437 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		FABEAF482AF1CA8F0030F754 /* tic tac toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tic tac toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABEAF4B2AF1CA8F0030F754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,11 +72,11 @@
 				FABEAF4D2AF1CA8F0030F754 /* SceneDelegate.swift */,
 				FABEAF4F2AF1CA8F0030F754 /* GameViewController.swift */,
 				C5C49E172AF55BC2003EB437 /* GameViewModel.swift */,
-				C58301562AF6E25500C52F80 /* LeaderBoardTableViewController.swift */,
 				FABEAF512AF1CA8F0030F754 /* Main.storyboard */,
 				C58301542AF6E10200C52F80 /* LeaderBoardListVC.storyboard */,
 				518F65382AF6D9D90065C39B /* FirstVC.storyboard */,
 				518F653C2AF6DA590065C39B /* FirstLoginViewController.swift */,
+				C58301582AF6E90A00C52F80 /* LeaderBoardViewController.swift */,
 				518F653A2AF6DA2B0065C39B /* FirstViewController.swift */,
 				FABEAF542AF1CA910030F754 /* Assets.xcassets */,
 				FABEAF562AF1CA910030F754 /* LaunchScreen.storyboard */,
@@ -158,11 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C58301592AF6E90A00C52F80 /* LeaderBoardViewController.swift in Sources */,
 				518F653B2AF6DA2B0065C39B /* FirstViewController.swift in Sources */,
 				FABEAF502AF1CA8F0030F754 /* GameViewController.swift in Sources */,
 				FABEAF4C2AF1CA8F0030F754 /* AppDelegate.swift in Sources */,
 				C5C49E182AF55BC2003EB437 /* GameViewModel.swift in Sources */,
-				C58301572AF6E25500C52F80 /* LeaderBoardTableViewController.swift in Sources */,
 				FABEAF4E2AF1CA8F0030F754 /* SceneDelegate.swift in Sources */,
 				518F653D2AF6DA590065C39B /* FirstLoginViewController.swift in Sources */,
 			);

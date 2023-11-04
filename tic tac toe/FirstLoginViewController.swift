@@ -14,8 +14,15 @@ class FirstLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    @IBAction private func unwind(for segue: UIStoryboardSegue) {
+    
     }
     
     @IBAction func gameStart(_ sender: Any) {

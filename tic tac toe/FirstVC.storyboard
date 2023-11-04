@@ -11,7 +11,7 @@
         <!--First View Controller-->
         <scene sceneID="PFN-XH-qyl">
             <objects>
-                <viewController id="Qza-X2-Z5i" customClass="FirstViewController" customModule="tic_tac_toe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="Qza-X2-Z5i" customClass="FirstViewController" customModule="tic_tac_toe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QIw-oX-Jep">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Таблица лидеров"/>
                                 <connections>
                                     <action selector="tableLeaders" destination="Qza-X2-Z5i" eventType="touchUpInside" id="bJo-qb-qnR"/>
-                                    <segue destination="BmW-bM-Gqr" kind="presentation" identifier="list" id="JFO-Fp-aEY"/>
+                                    <segue destination="BmW-bM-Gqr" kind="presentation" identifier="list" modalPresentationStyle="fullScreen" id="JFO-Fp-aEY"/>
                                 </connections>
                             </button>
                         </subviews>
