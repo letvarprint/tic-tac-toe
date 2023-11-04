@@ -41,7 +41,7 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Таблица лидеров"/>
                                 <connections>
                                     <action selector="tableLeaders" destination="Qza-X2-Z5i" eventType="touchUpInside" id="bJo-qb-qnR"/>
-                                    <segue destination="BmW-bM-Gqr" kind="presentation" id="JFO-Fp-aEY"/>
+                                    <segue destination="BmW-bM-Gqr" kind="presentation" identifier="list" id="JFO-Fp-aEY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,7 +69,7 @@
         <!--list-->
         <scene sceneID="GLg-LW-8zI">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="list" storyboardName="Main" referencedIdentifier="list" id="BmW-bM-Gqr" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="list" storyboardName="LeaderBoardListVC" referencedIdentifier="list" id="BmW-bM-Gqr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pCf-Xf-W1c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-77722" y="-24149"/>
@@ -113,7 +113,7 @@
                                 <buttonConfiguration key="configuration" style="gray" title="В бой"/>
                                 <connections>
                                     <action selector="gameStart:" destination="4jj-9d-r4J" eventType="touchUpInside" id="uLw-CW-qca"/>
-                                    <segue destination="1Bg-Uy-7LO" kind="presentation" identifier="gameVC" id="mmz-Xh-LeQ"/>
+                                    <segue destination="1Bg-Uy-7LO" kind="presentation" identifier="gameVC" modalPresentationStyle="fullScreen" id="mmz-Xh-LeQ"/>
                                 </connections>
                             </button>
                         </subviews>
