@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		514D7CA12AF5804D00D45742 /* FirstLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514D7C9D2AF5804D00D45742 /* FirstLoginViewController.swift */; };
+		514D7CA22AF5804D00D45742 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514D7C9E2AF5804D00D45742 /* FirstViewController.swift */; };
+		514D7CA32AF5804D00D45742 /* FirstRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514D7C9F2AF5804D00D45742 /* FirstRulesViewController.swift */; };
+		514D7CA52AF5818500D45742 /* FIrstVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514D7CA42AF5818500D45742 /* FIrstVC.storyboard */; };
 		C5C49E162AF55A0E003EB437 /* PlayerSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C49E152AF55A0E003EB437 /* PlayerSettingsModel.swift */; };
 		C5C49E182AF55BC2003EB437 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C49E172AF55BC2003EB437 /* GameViewModel.swift */; };
 		C5C49E1A2AF55DEA003EB437 /* LeaderTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C49E192AF55DEA003EB437 /* LeaderTableModel.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		514D7C9D2AF5804D00D45742 /* FirstLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstLoginViewController.swift; path = ../../Desktop/ticTacS/ticTacS/FirstLoginViewController.swift; sourceTree = "<group>"; };
+		514D7C9E2AF5804D00D45742 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = ../../Desktop/ticTacS/ticTacS/FirstViewController.swift; sourceTree = "<group>"; };
+		514D7C9F2AF5804D00D45742 /* FirstRulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstRulesViewController.swift; path = ../../Desktop/ticTacS/ticTacS/FirstRulesViewController.swift; sourceTree = "<group>"; };
+		514D7CA42AF5818500D45742 /* FIrstVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FIrstVC.storyboard; sourceTree = "<group>"; };
 		C5C49E152AF55A0E003EB437 /* PlayerSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettingsModel.swift; sourceTree = "<group>"; };
 		C5C49E172AF55BC2003EB437 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		C5C49E192AF55DEA003EB437 /* LeaderTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderTableModel.swift; sourceTree = "<group>"; };
@@ -68,7 +76,11 @@
 				C5C49E152AF55A0E003EB437 /* PlayerSettingsModel.swift */,
 				C5C49E172AF55BC2003EB437 /* GameViewModel.swift */,
 				C5C49E192AF55DEA003EB437 /* LeaderTableModel.swift */,
+				514D7C9D2AF5804D00D45742 /* FirstLoginViewController.swift */,
+				514D7C9F2AF5804D00D45742 /* FirstRulesViewController.swift */,
+				514D7C9E2AF5804D00D45742 /* FirstViewController.swift */,
 				FABEAF512AF1CA8F0030F754 /* Main.storyboard */,
+				514D7CA42AF5818500D45742 /* FIrstVC.storyboard */,
 				FABEAF542AF1CA910030F754 /* Assets.xcassets */,
 				FABEAF562AF1CA910030F754 /* LaunchScreen.storyboard */,
 				FABEAF592AF1CA910030F754 /* Info.plist */,
@@ -136,6 +148,7 @@
 			files = (
 				FABEAF582AF1CA910030F754 /* LaunchScreen.storyboard in Resources */,
 				FABEAF552AF1CA910030F754 /* Assets.xcassets in Resources */,
+				514D7CA52AF5818500D45742 /* FIrstVC.storyboard in Resources */,
 				FABEAF532AF1CA8F0030F754 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,7 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				514D7CA22AF5804D00D45742 /* FirstViewController.swift in Sources */,
+				514D7CA32AF5804D00D45742 /* FirstRulesViewController.swift in Sources */,
 				C5C49E162AF55A0E003EB437 /* PlayerSettingsModel.swift in Sources */,
+				514D7CA12AF5804D00D45742 /* FirstLoginViewController.swift in Sources */,
 				FABEAF502AF1CA8F0030F754 /* ViewController.swift in Sources */,
 				FABEAF4C2AF1CA8F0030F754 /* AppDelegate.swift in Sources */,
 				C5C49E1A2AF55DEA003EB437 /* LeaderTableModel.swift in Sources */,
@@ -311,6 +327,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,6 +358,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
