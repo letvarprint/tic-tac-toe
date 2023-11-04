@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FirstLoginViewController: UIViewController {
+final class FirstLoginViewController: UIViewController {
     
     @IBOutlet weak var userOne: UITextField!
     @IBOutlet weak var userTwo: UITextField!
@@ -16,7 +16,7 @@ class FirstLoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let gameVC = segue.destination as? GameViewController else { return }
-        
+        gameVC.model = model
     }
     
     

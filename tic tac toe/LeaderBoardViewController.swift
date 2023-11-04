@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LeaderBoardViewController: UIViewController {
+final class LeaderBoardViewController: UIViewController {
 
     var model: ChoiсePlayer!
     

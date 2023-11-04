@@ -38,6 +38,10 @@ final class GameViewController: UIViewController {
         resetButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
         leaderboardButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let leaderVC = segue.destination as? LeaderBoardViewController else { return }
+        leaderVC.model = model
+    }
 //MARK: - IBAction
     @IBAction func makeGameAction(_ sender: UIButton) {
         let tag = sender.tag

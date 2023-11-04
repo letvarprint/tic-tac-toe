@@ -16,8 +16,6 @@ struct ChoiсePlayer {
 struct GameModel {
     let playerOne: String
     let playerTwo: String
-    let playerCrossImage: String
-    let playerRingImage: String
     let currentMove: String
     let playerOneScore: Int
     let playerTwoScore: Int
@@ -37,8 +35,6 @@ extension ChoiсePlayer {
             game: GameModel(
                 playerOne: "",
                 playerTwo: "",
-                playerCrossImage: "",
-                playerRingImage: "",
                 currentMove: "",
                 playerOneScore: 0,
                 playerTwoScore: 0,
