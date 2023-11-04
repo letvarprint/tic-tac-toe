@@ -11,7 +11,7 @@ struct ChoiсePlayer {
     let playerOneTF: String
     let playerTwoTF: String
     let game: GameModel
-    let leaderBoard: LeaderBoard
+
 }
 struct GameModel {
     let playerOne: String
@@ -30,4 +30,18 @@ struct LeaderBoard {
 }
 
 extension ChoiсePlayer {
+    private func getModel() -> ChoiсePlayer {
+        ChoiсePlayer(
+            playerOneTF: "",
+            playerTwoTF: "",
+            game: GameModel(
+                playerOne: playerOneTF,
+                playerTwo: playerTwoTF,
+                playerCrossImage: "",
+                playerRingImage: "",
+                currentMove: "",
+                playerOneScore: 0,
+                playerTwoScore: 0,
+                leaderBoard: LeaderBoard(winerName: "", score: 0)))
+    }
 }
