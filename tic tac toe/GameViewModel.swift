@@ -7,20 +7,27 @@
 
 import Foundation
 
+struct ChoiсePlayer {
+    let playerOneTF: String
+    let playerTwoTF: String
+    let game: GameModel
+    let leaderBoard: LeaderBoard
+}
 struct GameModel {
     let playerOne: String
     let playerTwo: String
     let playerCrossImage: String
     let playerRingImage: String
     let currentMove: String
-}
-
-struct ChoiсePlayer {
-    let playerOne: String
-    let playerTwo: String
+    let playerOneScore: Int
+    let playerTwoScore: Int
+    let leaderBoard: LeaderBoard
 }
 
 struct LeaderBoard {
-    let nickname: String
+    let winerName: String
     let score: Int
+}
+
+extension ChoiсePlayer {
 }

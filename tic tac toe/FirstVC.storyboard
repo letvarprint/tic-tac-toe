@@ -41,6 +41,7 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Таблица лидеров"/>
                                 <connections>
                                     <action selector="tableLeaders" destination="Qza-X2-Z5i" eventType="touchUpInside" id="bJo-qb-qnR"/>
+                                    <segue destination="BmW-bM-Gqr" kind="presentation" id="JFO-Fp-aEY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,6 +65,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FY2-rT-jlP" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-77650" y="-24618"/>
+        </scene>
+        <!--list-->
+        <scene sceneID="GLg-LW-8zI">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="list" storyboardName="Main" referencedIdentifier="list" id="BmW-bM-Gqr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCf-Xf-W1c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-77722" y="-24149"/>
         </scene>
         <!--First Login View Controller-->
         <scene sceneID="anY-dQ-yCe">
