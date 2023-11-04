@@ -6,12 +6,24 @@ final class GameViewController: UIViewController {
     @IBOutlet weak var playerTwoLabel: UILabel!
     @IBOutlet weak var playerTurnLabel: UILabel!
     
+    @IBOutlet weak var playerOneScore: UILabel!
+    @IBOutlet weak var playerTwoScore: UILabel!
+    
     @IBOutlet var xImageViews: [UIImageView]!
     @IBOutlet var oImageViews: [UIImageView]!
     
     @IBOutlet var buttons: [UIButton]!
     
+    @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var leaderboardButton: UIButton!
+    
     private var currentPlayer: Player = .player1
+    
+    private let playerOneWins = "Player 1 wins"
+    private let playerTwoWins = "Player 2 wins"
+    private let draw = "Draw"
+    private let gameIsOver = "Game is over"
     
     private var boardState = [Player?](repeating: nil, count: 9)
     
@@ -20,9 +32,12 @@ final class GameViewController: UIViewController {
             button.layer.borderWidth = 3.0
             button.layer.borderColor = UIColor.black.cgColor 
         }
+        homeButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        resetButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        leaderboardButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
     }
-    
-    @IBAction func Button(_ sender: UIButton) {
+//MARK: - IBAction
+    @IBAction func makeGameAction(_ sender: UIButton) {
         let tag = sender.tag
         let index = tag - 1
         
@@ -38,29 +53,46 @@ final class GameViewController: UIViewController {
         }
         
         if checkForWinner() == .player1 {
-            showAlert(with: "Player 1 wins", and: "Game is over")
+            showAlert(with: playerOneWins, and: gameIsOver)
+            updateScore(for: playerOneScore)
         } else if checkForWinner() == .player2 {
-            showAlert(with: "Player 2 wins", and: "Game is over")
+            showAlert(with: playerTwoWins, and: gameIsOver)
+            updateScore(for: playerTwoScore)
         } else if checkBoardIsFull() {
-            showAlert(with: "Draw", and: "Game is over")
+            showAlert(with: draw, and: gameIsOver)
         }
     }
-        
-        private func takeTurn(x: UIView? = nil, o: UIView? = nil, button: UIButton) {
-            x?.isHidden = false
-            o?.isHidden = false
-            
-            button.isUserInteractionEnabled = false
-            
-            let isXNotNil = x != nil
-            
-            playerTurnLabel.text = isXNotNil ? "Ход Player 2" : "Ход Player 1"
-            playerTurnLabel.textColor = isXNotNil ? UIColor.systemBlue : UIColor.red
-            currentPlayer = isXNotNil ? .player2 : .player1
-            
-            
+    
+    @IBAction func makeReset() {
+        resetGame()
+    }
+    
+    @IBAction func switchScreen(_ sender: UIButton) {
+        let tag = sender.tag
+        switch tag {
+        case 10:
+            print("Переход на в главное меню")
+            // Тут надо сделать сегвей
+        default:
+            print("Переход на таблицу лидеров")
+            // Тут надо сделать сегвей
         }
+    }
+    
+//MARK: - MainGameLogic
+    private func takeTurn(x: UIView? = nil, o: UIView? = nil, button: UIButton) {
+        x?.isHidden = false
+        o?.isHidden = false
         
+        button.isUserInteractionEnabled = false
+        
+        let isXNotNil = x != nil
+        
+        playerTurnLabel.text = isXNotNil ? "Ход Player 2" : "Ход Player 1"
+        playerTurnLabel.textColor = isXNotNil ? UIColor.systemBlue : UIColor.red
+        currentPlayer = isXNotNil ? .player2 : .player1
+    }
+    
     private func checkForWinner() -> Player? {
         let winPatterns: [[Int]] = [
             [0, 1, 2], [3, 4, 5], [6, 7, 8], // Горизонтали
@@ -76,7 +108,7 @@ final class GameViewController: UIViewController {
             }
         }
         return nil
-        }
+    }
     
     private func checkBoardIsFull() -> Bool {
         if !boardState.contains(nil) {
@@ -86,30 +118,62 @@ final class GameViewController: UIViewController {
         }
     }
     
+    private func resetGame() {
+        for xImage in xImageViews {
+            xImage.isHidden = true
+        }
+        for oImage in oImageViews {
+            oImage.isHidden = true
+        }
+        for button in buttons {
+            button.isUserInteractionEnabled = true
+        }
+        boardState = [Player?](repeating: nil, count: 9)
+        currentPlayer = .player1
+        playerTurnLabel.text = "Ход Player 1"
+        playerTurnLabel.textColor = UIColor.red
+    }
+    
+    private func updateScore(for player: UILabel) {
+        player.text = String((Int(player.text ?? "0") ?? 0) + 1)
+    }
+    
+//MARK: - ButtonAnimation
+    @objc func buttonPressed(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.15, animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }) { _ in
+            UIView.animate(withDuration: 0.1) {
+                sender.transform = .identity
+            }
+        }
+    }
+}
+
+enum Player {
+    case player1
+    case player2
+}
+
+extension UIFont {
+    var isBold: Bool {
+        return fontDescriptor.symbolicTraits.contains(.traitBold)
+    }
+}
+//MARK: - UIAlertController
+extension GameViewController {
+    private func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert
+        )
         
-        private func showAlert(with title: String, and message: String) {
-            let alert = UIAlertController(title: title,
-                                          message: message,
-                                          preferredStyle: .alert
-            )
-            
-            let okAction = UIAlertAction(title: "OK", style: .default)
-            
-            alert.addAction(okAction)
-            present(alert, animated: true)
-        }
+        let returnAction = UIAlertAction(title: "Сыграть снова", style: .default) { _ in self.resetGame()}
+        let playAgainAction = UIAlertAction(title: "Главное меню", style: .default)
+        
+        
+        alert.addAction(returnAction)
+        alert.addAction(playAgainAction)
+        present(alert, animated: true)
     }
-
-
-    enum Player {
-        case player1
-        case player2
-    }
-    
-    extension UIFont {
-        var isBold: Bool {
-            return fontDescriptor.symbolicTraits.contains(.traitBold)
-        }
-    }
-    
-
+}
