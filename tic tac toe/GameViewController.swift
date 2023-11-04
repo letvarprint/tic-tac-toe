@@ -13,6 +13,11 @@ final class GameViewController: UIViewController {
     
     private var currentPlayer: Player = .player1
     
+    private let playerOneWins = "Player 1 wins"
+    private let playerTwoWins = "Player 2 wins"
+    private let draw = "Draw"
+    private let gameIsOver = "Game is over"
+    
     private var boardState = [Player?](repeating: nil, count: 9)
     
     override func viewDidLoad() {
@@ -38,11 +43,11 @@ final class GameViewController: UIViewController {
         }
         
         if checkForWinner() == .player1 {
-            showAlert(with: "Player 1 wins", and: "Game is over")
+            showAlert(with: playerOneWins, and: gameIsOver)
         } else if checkForWinner() == .player2 {
-            showAlert(with: "Player 2 wins", and: "Game is over")
+            showAlert(with: playerTwoWins, and: gameIsOver)
         } else if checkBoardIsFull() {
-            showAlert(with: "Draw", and: "Game is over")
+            showAlert(with: draw, and: gameIsOver)
         }
     }
         
@@ -86,6 +91,20 @@ final class GameViewController: UIViewController {
         }
     }
     
+    private func resetGame() {
+        for xImage in xImageViews {
+            xImage.isHidden = true
+        }
+        for oImage in oImageViews {
+            oImage.isHidden = true
+        }
+        for button in buttons {
+            button.isUserInteractionEnabled = true
+        }
+        boardState = [Player?](repeating: nil, count: 9)
+        currentPlayer = .player1
+        playerTurnLabel.text = "Ход Player 1"
+    }
         
         private func showAlert(with title: String, and message: String) {
             let alert = UIAlertController(title: title,
@@ -93,9 +112,12 @@ final class GameViewController: UIViewController {
                                           preferredStyle: .alert
             )
             
-            let okAction = UIAlertAction(title: "OK", style: .default)
+            let returnAction = UIAlertAction(title: "Главное меню", style: .default)
+            let playAgainAction = UIAlertAction(title: "Сыграть снова", style: .default) { _ in self.resetGame()}
             
-            alert.addAction(okAction)
+            
+            alert.addAction(returnAction)
+            alert.addAction(playAgainAction)
             present(alert, animated: true)
         }
     }
