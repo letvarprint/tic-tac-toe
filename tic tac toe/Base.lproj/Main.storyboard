@@ -81,7 +81,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
-                                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aEB-oL-A8z"/>
+                                                    <action selector="makeGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aEB-oL-A8z"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNh-Yl-d5D" userLabel="Button Two">
@@ -89,7 +89,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
-                                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1z8-fX-kJ3"/>
+                                                    <action selector="makeGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1z8-fX-kJ3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzj-tx-qql" userLabel="Button Three">
@@ -97,7 +97,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
-                                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kei-s8-cXR"/>
+                                                    <action selector="makeGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kei-s8-cXR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -110,7 +110,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
-                                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YY0-aP-4vX"/>
+                                                    <action selector="makeGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YY0-aP-4vX"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIn-3U-Ci0" userLabel="Button Five">
@@ -118,7 +118,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
-                                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j9a-Kl-ZaN"/>
+                                                    <action selector="makeGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j9a-Kl-ZaN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rui-8B-TaW" userLabel="Button Six">
@@ -126,7 +126,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
-                                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oz6-GO-p6m"/>
+                                                    <action selector="makeGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oz6-GO-p6m"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -139,7 +139,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
-                                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EEp-ik-RsP"/>
+                                                    <action selector="makeGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EEp-ik-RsP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMh-hW-uMr" userLabel="Button Eight">
@@ -147,7 +147,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
-                                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oxd-x6-Nad"/>
+                                                    <action selector="makeGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oxd-x6-Nad"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYR-zV-NVS" userLabel="Button Nine">
@@ -155,7 +155,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
-                                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bLg-MY-vdP"/>
+                                                    <action selector="makeGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bLg-MY-vdP"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -202,22 +202,82 @@
                                     <constraint firstAttribute="width" secondItem="tuh-PK-lME" secondAttribute="height" multiplier="50:37" id="UqL-O6-T7E"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdh-mZ-iza">
+                                <rect key="frame" x="105.66666666666667" y="99.333333333333329" width="17.666666666666671" height="32.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7C-H4-uCq">
+                                <rect key="frame" x="308" y="99.333333333333329" width="17.666666666666686" height="32.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gag-aF-VSh">
+                                <rect key="frame" x="165" y="773" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="0TF-yY-pO8"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="fgu-hJ-guN"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="reset"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="makeReset" destination="BYZ-38-t0r" eventType="touchUpInside" id="epS-uZ-gXn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoF-55-jYi">
+                                <rect key="frame" x="35" y="793" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="lus-UU-AST"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="qJR-FE-gJY"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="home"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="switchScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9TB-n5-Wpp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3h-fn-XIj" userLabel="Trophy Button">
+                                <rect key="frame" x="335" y="793" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="18H-V5-dU5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="X5a-j4-Mxl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="trophy"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="switchScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jrd-Xd-nFp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f3h-fn-XIj" secondAttribute="trailing" constant="35" id="0Bi-0E-i0n"/>
                             <constraint firstItem="38T-Mg-1A6" firstAttribute="centerX" secondItem="Rui-8B-TaW" secondAttribute="centerX" id="0ut-kb-HD9"/>
                             <constraint firstItem="FfX-P3-tfP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Lk-fH-Ycv"/>
+                            <constraint firstItem="Gag-aF-VSh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1o5-Bn-OoD"/>
                             <constraint firstItem="OSJ-QZ-wwO" firstAttribute="width" secondItem="u5o-pw-h9b" secondAttribute="height" multiplier="0.6" id="1xw-vd-4tn"/>
                             <constraint firstItem="CG5-0F-fe8" firstAttribute="centerY" secondItem="Gzj-tx-qql" secondAttribute="centerY" id="2N0-Qo-de3"/>
+                            <constraint firstItem="KoF-55-jYi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="4kC-Sh-FFo"/>
                             <constraint firstItem="PeC-h6-SKQ" firstAttribute="centerY" secondItem="wH9-No-sw0" secondAttribute="centerY" id="53z-c9-B4x"/>
                             <constraint firstItem="C9Q-K5-dnv" firstAttribute="centerX" secondItem="gUi-5q-yWy" secondAttribute="centerX" id="5ai-Ku-NCJ"/>
                             <constraint firstItem="OSJ-QZ-wwO" firstAttribute="centerY" secondItem="u5o-pw-h9b" secondAttribute="centerY" id="608-X6-HzW"/>
                             <constraint firstItem="38T-Mg-1A6" firstAttribute="centerY" secondItem="Rui-8B-TaW" secondAttribute="centerY" id="627-4g-j0l"/>
+                            <constraint firstItem="mdh-mZ-iza" firstAttribute="centerY" secondItem="C9Q-K5-dnv" secondAttribute="centerY" id="6sl-AN-fca"/>
                             <constraint firstItem="OSJ-QZ-wwO" firstAttribute="centerX" secondItem="u5o-pw-h9b" secondAttribute="centerX" id="7bM-oB-SUg"/>
                             <constraint firstItem="2Xl-EY-FPU" firstAttribute="centerY" secondItem="qYR-zV-NVS" secondAttribute="centerY" id="7jR-gA-U5e"/>
                             <constraint firstItem="eiI-lb-K7I" firstAttribute="centerY" secondItem="u5o-pw-h9b" secondAttribute="centerY" id="9Wd-OV-9nG"/>
                             <constraint firstItem="gUi-5q-yWy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="EM3-sQ-VWN"/>
+                            <constraint firstItem="f3h-fn-XIj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gag-aF-VSh" secondAttribute="trailing" constant="8" symbolic="YES" id="Eh2-Sv-a7K"/>
+                            <constraint firstItem="mdh-mZ-iza" firstAttribute="leading" secondItem="C9Q-K5-dnv" secondAttribute="trailing" constant="15" id="FUX-fn-yZa"/>
                             <constraint firstItem="wvF-CT-j3z" firstAttribute="centerX" secondItem="pIn-3U-Ci0" secondAttribute="centerX" id="GOW-ds-ivU"/>
                             <constraint firstItem="EpS-Hi-ajE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="IWM-Cd-NU2"/>
                             <constraint firstItem="38T-Mg-1A6" firstAttribute="width" secondItem="Rui-8B-TaW" secondAttribute="height" multiplier="0.6" id="IeJ-mC-Egs"/>
@@ -228,6 +288,8 @@
                             <constraint firstItem="EpS-Hi-ajE" firstAttribute="top" secondItem="FfX-P3-tfP" secondAttribute="bottom" constant="25" id="LoR-J1-zgV"/>
                             <constraint firstItem="eHE-F4-bCv" firstAttribute="centerY" secondItem="wH9-No-sw0" secondAttribute="centerY" id="MAu-8C-Hhs"/>
                             <constraint firstItem="2h5-Xw-E0g" firstAttribute="centerY" secondItem="hMh-hW-uMr" secondAttribute="centerY" id="NKN-0h-Ne2"/>
+                            <constraint firstItem="f3h-fn-XIj" firstAttribute="centerY" secondItem="Gag-aF-VSh" secondAttribute="centerY" id="NVE-LU-aiU"/>
+                            <constraint firstItem="d7C-H4-uCq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OSJ-QZ-wwO" secondAttribute="trailing" constant="8" symbolic="YES" id="OQn-bA-BEn"/>
                             <constraint firstItem="tuh-PK-lME" firstAttribute="centerX" secondItem="9AG-c2-3x0" secondAttribute="centerX" id="OU1-Ny-g2s"/>
                             <constraint firstItem="el1-ux-HTW" firstAttribute="centerX" secondItem="Rui-8B-TaW" secondAttribute="centerX" id="POn-iS-CY5"/>
                             <constraint firstItem="EpS-Hi-ajE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="Pm6-u7-c45"/>
@@ -236,11 +298,13 @@
                             <constraint firstItem="CG5-0F-fe8" firstAttribute="width" secondItem="Gzj-tx-qql" secondAttribute="height" multiplier="89:149" id="QBM-wo-lJ0"/>
                             <constraint firstItem="2Xl-EY-FPU" firstAttribute="width" secondItem="qYR-zV-NVS" secondAttribute="height" multiplier="0.6" id="RUR-zI-TPa"/>
                             <constraint firstItem="2h5-Xw-E0g" firstAttribute="centerX" secondItem="hMh-hW-uMr" secondAttribute="centerX" id="StA-xG-Awh"/>
+                            <constraint firstItem="KoF-55-jYi" firstAttribute="centerY" secondItem="Gag-aF-VSh" secondAttribute="centerY" id="Svv-WN-x1Y"/>
                             <constraint firstItem="dpO-Za-let" firstAttribute="centerX" secondItem="qNh-Yl-d5D" secondAttribute="centerX" id="Vh0-bh-qC2"/>
                             <constraint firstItem="DSQ-mD-rX2" firstAttribute="centerX" secondItem="cd1-gu-Z0O" secondAttribute="centerX" id="VuK-1R-QhR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9AG-c2-3x0" secondAttribute="trailing" constant="30" id="Vxo-TR-Ct5"/>
                             <constraint firstItem="EpS-Hi-ajE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W5f-0V-hJ9"/>
                             <constraint firstItem="PeC-h6-SKQ" firstAttribute="width" secondItem="wH9-No-sw0" secondAttribute="height" multiplier="0.6" id="XQa-yf-yUT"/>
+                            <constraint firstItem="tuh-PK-lME" firstAttribute="leading" secondItem="d7C-H4-uCq" secondAttribute="trailing" constant="15" id="Xlj-j5-1gX"/>
                             <constraint firstItem="Ibq-jr-pNK" firstAttribute="centerX" secondItem="cd1-gu-Z0O" secondAttribute="centerX" id="Xrr-He-3TI"/>
                             <constraint firstItem="e82-PM-LT3" firstAttribute="centerX" secondItem="Gzj-tx-qql" secondAttribute="centerX" id="YsJ-2B-3nw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EpS-Hi-ajE" secondAttribute="trailing" constant="10" id="Z9G-q9-min"/>
@@ -248,12 +312,15 @@
                             <constraint firstItem="2h5-Xw-E0g" firstAttribute="width" secondItem="hMh-hW-uMr" secondAttribute="height" multiplier="0.6" id="ZzL-2y-Qkl"/>
                             <constraint firstItem="rR5-0L-RG1" firstAttribute="width" secondItem="pIn-3U-Ci0" secondAttribute="height" multiplier="0.6" id="aKC-LP-NkN"/>
                             <constraint firstItem="Ibq-jr-pNK" firstAttribute="width" secondItem="cd1-gu-Z0O" secondAttribute="height" multiplier="0.6" id="abA-ag-Mss"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gag-aF-VSh" secondAttribute="bottom" constant="25" id="aer-JK-NF5"/>
                             <constraint firstItem="C9Q-K5-dnv" firstAttribute="top" secondItem="gUi-5q-yWy" secondAttribute="bottom" constant="5" id="b0r-Dy-JZm"/>
+                            <constraint firstItem="OSJ-QZ-wwO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mdh-mZ-iza" secondAttribute="trailing" constant="8" symbolic="YES" id="cON-qw-syc"/>
                             <constraint firstItem="fLu-xv-okh" firstAttribute="width" secondItem="qYR-zV-NVS" secondAttribute="height" multiplier="0.6" id="cxe-9U-BVz"/>
                             <constraint firstItem="Vza-Sx-rBI" firstAttribute="width" secondItem="qNh-Yl-d5D" secondAttribute="height" multiplier="89:149" id="ddc-yI-9Lb"/>
                             <constraint firstItem="CG5-0F-fe8" firstAttribute="centerX" secondItem="Gzj-tx-qql" secondAttribute="centerX" id="esD-sV-8Lk"/>
                             <constraint firstItem="dpO-Za-let" firstAttribute="centerY" secondItem="qNh-Yl-d5D" secondAttribute="centerY" id="fJM-2M-Mrn"/>
                             <constraint firstItem="tuh-PK-lME" firstAttribute="top" secondItem="9AG-c2-3x0" secondAttribute="bottom" constant="5" id="gaX-rm-3hB"/>
+                            <constraint firstItem="d7C-H4-uCq" firstAttribute="centerY" secondItem="tuh-PK-lME" secondAttribute="centerY" id="h0S-gJ-RvJ"/>
                             <constraint firstItem="eiI-lb-K7I" firstAttribute="centerX" secondItem="u5o-pw-h9b" secondAttribute="centerX" id="hAv-c9-kNt"/>
                             <constraint firstItem="86K-Lv-VcI" firstAttribute="centerY" secondItem="hMh-hW-uMr" secondAttribute="centerY" id="iQV-i7-Sd9"/>
                             <constraint firstItem="DSQ-mD-rX2" firstAttribute="centerY" secondItem="cd1-gu-Z0O" secondAttribute="centerY" id="j6r-rj-T3g"/>
@@ -272,6 +339,7 @@
                             <constraint firstItem="eHE-F4-bCv" firstAttribute="width" secondItem="wH9-No-sw0" secondAttribute="height" multiplier="0.6" id="t4W-9w-v94"/>
                             <constraint firstItem="9AG-c2-3x0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="tb9-6T-HEO"/>
                             <constraint firstItem="wvF-CT-j3z" firstAttribute="width" secondItem="pIn-3U-Ci0" secondAttribute="height" multiplier="0.6" id="tq9-JA-u3j"/>
+                            <constraint firstItem="Gag-aF-VSh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KoF-55-jYi" secondAttribute="trailing" constant="8" symbolic="YES" id="un8-2K-KhV"/>
                             <constraint firstItem="rR5-0L-RG1" firstAttribute="centerY" secondItem="pIn-3U-Ci0" secondAttribute="centerY" id="vBC-Q0-G4w"/>
                             <constraint firstItem="fLu-xv-okh" firstAttribute="centerY" secondItem="qYR-zV-NVS" secondAttribute="centerY" id="wIT-Mw-igl"/>
                             <constraint firstItem="tuh-PK-lME" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="25:406" id="wnf-xG-X4V"/>
@@ -281,9 +349,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="homeButton" destination="KoF-55-jYi" id="gM2-Wg-vY9"/>
+                        <outlet property="leaderboardButton" destination="f3h-fn-XIj" id="zk9-Cr-ul1"/>
                         <outlet property="playerOneLabel" destination="gUi-5q-yWy" id="ePC-49-3qg"/>
+                        <outlet property="playerOneScore" destination="mdh-mZ-iza" id="J7c-oc-KZr"/>
                         <outlet property="playerTurnLabel" destination="FfX-P3-tfP" id="01C-KF-nII"/>
                         <outlet property="playerTwoLabel" destination="9AG-c2-3x0" id="r2o-Et-oaO"/>
+                        <outlet property="playerTwoScore" destination="d7C-H4-uCq" id="HGn-Ir-Zmk"/>
+                        <outlet property="resetButton" destination="Gag-aF-VSh" id="gUp-V9-Rgo"/>
                         <outletCollection property="xImageViews" destination="PeC-h6-SKQ" collectionClass="NSMutableArray" id="ztC-34-iCl"/>
                         <outletCollection property="xImageViews" destination="Vza-Sx-rBI" collectionClass="NSMutableArray" id="CBg-4d-ZDT"/>
                         <outletCollection property="xImageViews" destination="CG5-0F-fe8" collectionClass="NSMutableArray" id="cep-sc-rNY"/>
@@ -321,6 +394,9 @@
     <resources>
         <image name="Image-3" width="619" height="620"/>
         <image name="Image-4" width="687" height="679"/>
+        <image name="home" width="96" height="96"/>
+        <image name="reset" width="96" height="96"/>
+        <image name="trophy" width="96" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
