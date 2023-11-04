@@ -27,9 +27,10 @@ class LeaderBoardViewController: UIViewController {
     }
     */
 
-    @IBAction func homeButtonClick() {
-        dismiss(animated: true)
+    @IBAction func homeButtonClick(_ sender: UIButton) {
+        performSegue(withIdentifier: "goHome", sender: self)
     }
+    
 }
 
 extension LeaderBoardViewController: UITableViewDelegate,UITableViewDataSource {
