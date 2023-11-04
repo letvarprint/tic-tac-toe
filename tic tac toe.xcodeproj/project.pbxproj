@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		518F65392AF6D9D90065C39B /* FirstVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518F65382AF6D9D90065C39B /* FirstVC.storyboard */; };
+		518F653B2AF6DA2B0065C39B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518F653A2AF6DA2B0065C39B /* FirstViewController.swift */; };
+		518F653D2AF6DA590065C39B /* FirstLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518F653C2AF6DA590065C39B /* FirstLoginViewController.swift */; };
 		C5C49E182AF55BC2003EB437 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C49E172AF55BC2003EB437 /* GameViewModel.swift */; };
 		FABEAF4C2AF1CA8F0030F754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABEAF4B2AF1CA8F0030F754 /* AppDelegate.swift */; };
 		FABEAF4E2AF1CA8F0030F754 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABEAF4D2AF1CA8F0030F754 /* SceneDelegate.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		518F65382AF6D9D90065C39B /* FirstVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstVC.storyboard; sourceTree = "<group>"; };
+		518F653A2AF6DA2B0065C39B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		518F653C2AF6DA590065C39B /* FirstLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLoginViewController.swift; sourceTree = "<group>"; };
 		C5C49E172AF55BC2003EB437 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		FABEAF482AF1CA8F0030F754 /* tic tac toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tic tac toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABEAF4B2AF1CA8F0030F754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 				FABEAF4F2AF1CA8F0030F754 /* GameViewController.swift */,
 				C5C49E172AF55BC2003EB437 /* GameViewModel.swift */,
 				FABEAF512AF1CA8F0030F754 /* Main.storyboard */,
+				518F65382AF6D9D90065C39B /* FirstVC.storyboard */,
+				518F653C2AF6DA590065C39B /* FirstLoginViewController.swift */,
+				518F653A2AF6DA2B0065C39B /* FirstViewController.swift */,
 				FABEAF542AF1CA910030F754 /* Assets.xcassets */,
 				FABEAF562AF1CA910030F754 /* LaunchScreen.storyboard */,
 				FABEAF592AF1CA910030F754 /* Info.plist */,
@@ -130,6 +139,7 @@
 			files = (
 				FABEAF582AF1CA910030F754 /* LaunchScreen.storyboard in Resources */,
 				FABEAF552AF1CA910030F754 /* Assets.xcassets in Resources */,
+				518F65392AF6D9D90065C39B /* FirstVC.storyboard in Resources */,
 				FABEAF532AF1CA8F0030F754 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,10 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				518F653B2AF6DA2B0065C39B /* FirstViewController.swift in Sources */,
 				FABEAF502AF1CA8F0030F754 /* GameViewController.swift in Sources */,
 				FABEAF4C2AF1CA8F0030F754 /* AppDelegate.swift in Sources */,
 				C5C49E182AF55BC2003EB437 /* GameViewModel.swift in Sources */,
 				FABEAF4E2AF1CA8F0030F754 /* SceneDelegate.swift in Sources */,
+				518F653D2AF6DA590065C39B /* FirstLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
