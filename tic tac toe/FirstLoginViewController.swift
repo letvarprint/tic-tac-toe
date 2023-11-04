@@ -12,9 +12,13 @@ class FirstLoginViewController: UIViewController {
     @IBOutlet weak var userOne: UITextField!
     @IBOutlet weak var userTwo: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private let model = ChoiсePlayer.getModel()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let gameVC = segue.destination as? GameViewController else { return }
+        
     }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)

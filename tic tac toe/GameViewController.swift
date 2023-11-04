@@ -27,6 +27,8 @@ final class GameViewController: UIViewController {
     
     private var boardState = [Player?](repeating: nil, count: 9)
     
+    var model: ChoiсePlayer!
+    
     override func viewDidLoad() {
         for button in buttons {
             button.layer.borderWidth = 3.0

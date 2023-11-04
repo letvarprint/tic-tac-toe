@@ -9,11 +9,10 @@ import UIKit
 
 class LeaderBoardViewController: UIViewController {
 
+    var model: ChoiсePlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 

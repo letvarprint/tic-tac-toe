@@ -30,13 +30,13 @@ struct LeaderBoard {
 }
 
 extension ChoiсePlayer {
-    private func getModel() -> ChoiсePlayer {
+   static func getModel() -> ChoiсePlayer {
         ChoiсePlayer(
             playerOneTF: "",
             playerTwoTF: "",
             game: GameModel(
-                playerOne: playerOneTF,
-                playerTwo: playerTwoTF,
+                playerOne: "",
+                playerTwo: "",
                 playerCrossImage: "",
                 playerRingImage: "",
                 currentMove: "",
