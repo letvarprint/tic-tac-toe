@@ -12,6 +12,18 @@ final class LeaderBoardViewController: UIViewController {
     var playerOne: String!
     var playerTwo: String!
     
+    var dataBase = DataBase.shared.data
+    
+    var data = DataBase.shared
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        data.sortDictionary()
+        print(dataBase.count)
+        for (name, score) in dataBase {
+            print(name, score)
+        }
+    }
     // MARK: - IBAcations
     @IBAction func homeButtonClick(_ sender: UIButton) {
         performSegue(withIdentifier: "goHome", sender: self)
@@ -22,19 +34,21 @@ extension LeaderBoardViewController: UITableViewDelegate,UITableViewDataSource {
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        dataBase.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "leaderCell", for: indexPath)
+        let dataArray = Array(dataBase)
+        let (name, score) = dataArray[indexPath.row]
         var content = cell.defaultContentConfiguration()
-        content.text = "❌ \(playerOne ?? "") vs ⭕️ \(playerTwo ?? "")"
+        content.text = "\(name): \(score)"
         cell.contentConfiguration = content
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        "История игр"
+        "Таблица лидеров"
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

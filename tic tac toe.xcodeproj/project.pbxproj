@@ -13,6 +13,7 @@
 		C58301552AF6E10200C52F80 /* LeaderBoardListVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58301542AF6E10200C52F80 /* LeaderBoardListVC.storyboard */; };
 		C58301592AF6E90A00C52F80 /* LeaderBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58301582AF6E90A00C52F80 /* LeaderBoardViewController.swift */; };
 		C5C49E182AF55BC2003EB437 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C49E172AF55BC2003EB437 /* GameViewModel.swift */; };
+		FA23945F2AF8243600ABACD5 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23945E2AF8243600ABACD5 /* DataBase.swift */; };
 		FABEAF4C2AF1CA8F0030F754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABEAF4B2AF1CA8F0030F754 /* AppDelegate.swift */; };
 		FABEAF4E2AF1CA8F0030F754 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABEAF4D2AF1CA8F0030F754 /* SceneDelegate.swift */; };
 		FABEAF502AF1CA8F0030F754 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABEAF4F2AF1CA8F0030F754 /* GameViewController.swift */; };
@@ -28,6 +29,7 @@
 		C58301542AF6E10200C52F80 /* LeaderBoardListVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LeaderBoardListVC.storyboard; sourceTree = "<group>"; };
 		C58301582AF6E90A00C52F80 /* LeaderBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewController.swift; sourceTree = "<group>"; };
 		C5C49E172AF55BC2003EB437 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		FA23945E2AF8243600ABACD5 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		FABEAF482AF1CA8F0030F754 /* tic tac toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tic tac toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABEAF4B2AF1CA8F0030F754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FABEAF4D2AF1CA8F0030F754 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,8 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				FABEAF4F2AF1CA8F0030F754 /* GameViewController.swift */,
-				518F653C2AF6DA590065C39B /* FirstLoginViewController.swift */,
 				C58301582AF6E90A00C52F80 /* LeaderBoardViewController.swift */,
+				518F653C2AF6DA590065C39B /* FirstLoginViewController.swift */,
 				518F653A2AF6DA2B0065C39B /* FirstViewController.swift */,
 			);
 			path = VIewControllers;
@@ -97,6 +99,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		FA2394602AF82C8B00ABACD5 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				FA23945E2AF8243600ABACD5 /* DataBase.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
 		FABEAF3F2AF1CA8F0030F754 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +126,7 @@
 		FABEAF4A2AF1CA8F0030F754 /* tic tac toe */ = {
 			isa = PBXGroup;
 			children = (
+				FA2394602AF82C8B00ABACD5 /* DataStore */,
 				C58301612AF7D43800C52F80 /* SupportingFiles */,
 				C583015E2AF7D3C700C52F80 /* VIewControllers */,
 				C58301602AF7D41F00C52F80 /* Model */,
@@ -204,6 +215,7 @@
 				FABEAF4C2AF1CA8F0030F754 /* AppDelegate.swift in Sources */,
 				C5C49E182AF55BC2003EB437 /* GameViewModel.swift in Sources */,
 				FABEAF4E2AF1CA8F0030F754 /* SceneDelegate.swift in Sources */,
+				FA23945F2AF8243600ABACD5 /* DataBase.swift in Sources */,
 				518F653D2AF6DA590065C39B /* FirstLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
