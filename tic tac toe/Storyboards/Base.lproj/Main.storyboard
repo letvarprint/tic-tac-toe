@@ -266,12 +266,21 @@
                                     <segue destination="8qx-Ws-4Ax" kind="presentation" modalPresentationStyle="fullScreen" id="TTM-br-AzS"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-3" translatesAutoresizingMaskIntoConstraints="NO" id="Pr2-BD-xV1">
+                                <rect key="frame" x="283" y="180" width="23" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="M19-w4-rFh"/>
+                                    <constraint firstAttribute="width" constant="23" id="XFj-qY-d1o"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Pr2-BD-xV1" firstAttribute="centerY" secondItem="FfX-P3-tfP" secondAttribute="centerY" id="0A1-0H-mUg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f3h-fn-XIj" secondAttribute="trailing" constant="35" id="0Bi-0E-i0n"/>
                             <constraint firstItem="38T-Mg-1A6" firstAttribute="centerX" secondItem="Rui-8B-TaW" secondAttribute="centerX" id="0ut-kb-HD9"/>
+                            <constraint firstItem="Pr2-BD-xV1" firstAttribute="leading" secondItem="FfX-P3-tfP" secondAttribute="trailing" constant="5" id="17G-Um-Vnp"/>
                             <constraint firstItem="FfX-P3-tfP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Lk-fH-Ycv"/>
                             <constraint firstItem="Gag-aF-VSh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1o5-Bn-OoD"/>
                             <constraint firstItem="OSJ-QZ-wwO" firstAttribute="width" secondItem="u5o-pw-h9b" secondAttribute="height" multiplier="0.6" id="1xw-vd-4tn"/>
@@ -285,6 +294,7 @@
                             <constraint firstItem="OSJ-QZ-wwO" firstAttribute="centerX" secondItem="u5o-pw-h9b" secondAttribute="centerX" id="7bM-oB-SUg"/>
                             <constraint firstItem="2Xl-EY-FPU" firstAttribute="centerY" secondItem="qYR-zV-NVS" secondAttribute="centerY" id="7jR-gA-U5e"/>
                             <constraint firstItem="eiI-lb-K7I" firstAttribute="centerY" secondItem="u5o-pw-h9b" secondAttribute="centerY" id="9Wd-OV-9nG"/>
+                            <constraint firstItem="Pr2-BD-xV1" firstAttribute="leading" secondItem="FfX-P3-tfP" secondAttribute="trailing" constant="5" id="DDn-RI-Vtm"/>
                             <constraint firstItem="gUi-5q-yWy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="EM3-sQ-VWN"/>
                             <constraint firstItem="f3h-fn-XIj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gag-aF-VSh" secondAttribute="trailing" constant="8" symbolic="YES" id="Eh2-Sv-a7K"/>
                             <constraint firstItem="mdh-mZ-iza" firstAttribute="leading" secondItem="C9Q-K5-dnv" secondAttribute="trailing" constant="15" id="FUX-fn-yZa"/>
@@ -363,6 +373,7 @@
                         <outlet property="leaderboardButton" destination="f3h-fn-XIj" id="zk9-Cr-ul1"/>
                         <outlet property="playerOneLabel" destination="gUi-5q-yWy" id="ePC-49-3qg"/>
                         <outlet property="playerOneScore" destination="mdh-mZ-iza" id="J7c-oc-KZr"/>
+                        <outlet property="playerTurnImageView" destination="Pr2-BD-xV1" id="mi8-20-6X3"/>
                         <outlet property="playerTurnLabel" destination="FfX-P3-tfP" id="01C-KF-nII"/>
                         <outlet property="playerTwoLabel" destination="9AG-c2-3x0" id="r2o-Et-oaO"/>
                         <outlet property="playerTwoScore" destination="d7C-H4-uCq" id="HGn-Ir-Zmk"/>

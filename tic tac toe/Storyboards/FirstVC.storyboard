@@ -11,7 +11,7 @@
         <!--First View Controller-->
         <scene sceneID="PFN-XH-qyl">
             <objects>
-                <viewController storyboardIdentifier="home" id="Qza-X2-Z5i" customClass="FirstViewController" customModule="tic_tac_toe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" modalPresentationStyle="fullScreen" id="Qza-X2-Z5i" customClass="FirstViewController" customModule="tic_tac_toe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QIw-oX-Jep">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +89,7 @@
         <!--First Login View Controller-->
         <scene sceneID="anY-dQ-yCe">
             <objects>
-                <viewController storyboardIdentifier="п" id="4jj-9d-r4J" customClass="FirstLoginViewController" customModule="tic_tac_toe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="п" modalPresentationStyle="fullScreen" id="4jj-9d-r4J" customClass="FirstLoginViewController" customModule="tic_tac_toe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NUM-Eu-UE4">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
