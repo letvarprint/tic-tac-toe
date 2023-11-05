@@ -54,8 +54,3 @@ extension LeaderBoard {
         LeaderBoard(playerOne: "", playerTwo: "", gameScore: "")
     }
 }
-
-enum Players {
-    case player1
-    case player2
-}
