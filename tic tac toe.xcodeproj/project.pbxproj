@@ -49,6 +49,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C583015E2AF7D3C700C52F80 /* VIewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FABEAF4F2AF1CA8F0030F754 /* GameViewController.swift */,
+				518F653C2AF6DA590065C39B /* FirstLoginViewController.swift */,
+				C58301582AF6E90A00C52F80 /* LeaderBoardViewController.swift */,
+				518F653A2AF6DA2B0065C39B /* FirstViewController.swift */,
+			);
+			path = VIewControllers;
+			sourceTree = "<group>";
+		};
+		C583015F2AF7D40600C52F80 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FABEAF512AF1CA8F0030F754 /* Main.storyboard */,
+				C58301542AF6E10200C52F80 /* LeaderBoardListVC.storyboard */,
+				518F65382AF6D9D90065C39B /* FirstVC.storyboard */,
+				FABEAF562AF1CA910030F754 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C58301602AF7D41F00C52F80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5C49E172AF55BC2003EB437 /* GameViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C58301612AF7D43800C52F80 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FABEAF4B2AF1CA8F0030F754 /* AppDelegate.swift */,
+				FABEAF4D2AF1CA8F0030F754 /* SceneDelegate.swift */,
+				FABEAF592AF1CA910030F754 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C58301622AF7D44C00C52F80 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FABEAF542AF1CA910030F754 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FABEAF3F2AF1CA8F0030F754 = {
 			isa = PBXGroup;
 			children = (
@@ -68,19 +116,11 @@
 		FABEAF4A2AF1CA8F0030F754 /* tic tac toe */ = {
 			isa = PBXGroup;
 			children = (
-				FABEAF4B2AF1CA8F0030F754 /* AppDelegate.swift */,
-				FABEAF4D2AF1CA8F0030F754 /* SceneDelegate.swift */,
-				FABEAF4F2AF1CA8F0030F754 /* GameViewController.swift */,
-				C5C49E172AF55BC2003EB437 /* GameViewModel.swift */,
-				FABEAF512AF1CA8F0030F754 /* Main.storyboard */,
-				C58301542AF6E10200C52F80 /* LeaderBoardListVC.storyboard */,
-				518F65382AF6D9D90065C39B /* FirstVC.storyboard */,
-				518F653C2AF6DA590065C39B /* FirstLoginViewController.swift */,
-				C58301582AF6E90A00C52F80 /* LeaderBoardViewController.swift */,
-				518F653A2AF6DA2B0065C39B /* FirstViewController.swift */,
-				FABEAF542AF1CA910030F754 /* Assets.xcassets */,
-				FABEAF562AF1CA910030F754 /* LaunchScreen.storyboard */,
-				FABEAF592AF1CA910030F754 /* Info.plist */,
+				C58301612AF7D43800C52F80 /* SupportingFiles */,
+				C583015E2AF7D3C700C52F80 /* VIewControllers */,
+				C58301602AF7D41F00C52F80 /* Model */,
+				C583015F2AF7D40600C52F80 /* Storyboards */,
+				C58301622AF7D44C00C52F80 /* Resources */,
 			);
 			path = "tic tac toe";
 			sourceTree = "<group>";
@@ -317,7 +357,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "tic tac toe/Info.plist";
+				INFOPLIST_FILE = "tic tac toe/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -347,7 +387,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "tic tac toe/Info.plist";
+				INFOPLIST_FILE = "tic tac toe/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
