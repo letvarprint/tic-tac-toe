@@ -8,35 +8,35 @@
 import UIKit
 
 final class LeaderBoardViewController: UIViewController {
+
+    var playerOne: String!
+    var playerTwo: String!
     
-    var model: ChoiсePlayer!
-    
-    var gameHistories: [String:String] = [:]
-    var players: String!
-    var howWins: String!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     @IBAction func homeButtonClick(_ sender: UIButton) {
         performSegue(withIdentifier: "goHome", sender: self)
     }
-    
-//    private func addHistories() -> [String:String] {
-//
-//    }
+   
 }
 
 extension LeaderBoardViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        gameHistories.values.count
+        1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "leaderCell", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        content.text = "❌ \(playerOne ?? "123")  vs ⭕️ \(playerTwo ?? "123")"
+        cell.contentConfiguration = content
         return cell
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        "История игр"
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

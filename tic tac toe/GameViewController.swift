@@ -37,7 +37,8 @@ final class GameViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let leaderVC = segue.destination as? LeaderBoardViewController else { return }
-        leaderVC.model = model
+        leaderVC.playerOne = playerOne
+        leaderVC.playerTwo = playerTwo
     }
 //MARK: - IBAction
     @IBAction func makeGameAction(_ sender: UIButton) {
