@@ -20,23 +20,20 @@ final class GameViewController: UIViewController {
     
     private var currentPlayer: Player = .player1
     
-    private let playerOneWins = "Player 1 wins"
-    private let playerTwoWins = "Player 2 wins"
+    private var playerOneWins: String!
+    private var playerTwoWins: String!
     private let draw = "Draw"
     private let gameIsOver = "Game is over"
-    
     private var boardState = [Player?](repeating: nil, count: 9)
     
     var model: ChoiсePlayer!
     
+    var playerOne: String?
+    var playerTwo: String?
+    
     override func viewDidLoad() {
-        for button in buttons {
-            button.layer.borderWidth = 3.0
-            button.layer.borderColor = UIColor.black.cgColor 
-        }
-        homeButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
-        resetButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
-        leaderboardButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        setupView()
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let leaderVC = segue.destination as? LeaderBoardViewController else { return }
@@ -94,7 +91,7 @@ final class GameViewController: UIViewController {
         
         let isXNotNil = x != nil
         
-        playerTurnLabel.text = isXNotNil ? "Ход Player 2" : "Ход Player 1"
+        playerTurnLabel.text = isXNotNil ? "Ход \(playerTwo ?? "123") ❌ " : "Ход \(playerOne ?? "123") ⭕️"
         playerTurnLabel.textColor = isXNotNil ? UIColor.systemBlue : UIColor.red
         currentPlayer = isXNotNil ? .player2 : .player1
     }
@@ -144,6 +141,19 @@ final class GameViewController: UIViewController {
         player.text = String((Int(player.text ?? "0") ?? 0) + 1)
     }
     
+    private func setupView() {
+        playerOneLabel.text = playerOne
+        playerTwoLabel.text = playerTwo
+        playerOneWins = "\(playerOne ?? "123") wins"
+        playerTwoWins = "\(playerTwo ?? "123") wins"
+        for button in buttons {
+            button.layer.borderWidth = 3.0
+            button.layer.borderColor = UIColor.black.cgColor
+        }
+        homeButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        resetButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        leaderboardButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+    }
 //MARK: - ButtonAnimation
     @objc func buttonPressed(_ sender: UIButton) {
         UIView.animate(withDuration: 0.15, animations: {

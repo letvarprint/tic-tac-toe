@@ -17,6 +17,9 @@ final class FirstLoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let gameVC = segue.destination as? GameViewController else { return }
         gameVC.model = model
+        gameVC.playerOne = userOne.text
+        gameVC.playerTwo = userTwo.text
+        
     }
     
     

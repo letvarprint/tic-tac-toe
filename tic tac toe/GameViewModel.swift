@@ -30,14 +30,31 @@ struct LeaderBoard {
 extension ChoiсePlayer {
    static func getModel() -> ChoiсePlayer {
         ChoiсePlayer(
-            playerOneTF: "",
-            playerTwoTF: "",
-            game: GameModel(
-                playerOne: "",
-                playerTwo: "",
-                currentMove: "",
-                playerOneScore: 0,
-                playerTwoScore: 0,
-                leaderBoard: LeaderBoard(winerName: "", score: 0)))
+            playerOneTF: "123",
+            playerTwoTF: "123",
+            game: GameModel.getGameModel())
     }
+}
+extension GameModel {
+    static func getGameModel() -> GameModel {
+        GameModel(
+            playerOne: "123",
+            playerTwo: "123",
+            currentMove: "",
+            playerOneScore: 0,
+            playerTwoScore: 0,
+            leaderBoard: LeaderBoard.getLeader()
+        )
+    }
+}
+
+extension LeaderBoard {
+    static func getLeader() -> LeaderBoard {
+        LeaderBoard(winerName: "", score: 0)
+    }
+}
+
+enum Players {
+    case player1
+    case player2
 }
