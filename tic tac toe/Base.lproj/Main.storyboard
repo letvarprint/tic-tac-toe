@@ -248,7 +248,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="switchScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9TB-n5-Wpp"/>
-                                    <segue destination="D0b-5c-A68" kind="presentation" modalPresentationStyle="fullScreen" id="Xgd-w3-iQ1"/>
+                                    <segue destination="D0b-5c-A68" kind="presentation" identifier="toHome" modalPresentationStyle="fullScreen" id="Xgd-w3-iQ1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3h-fn-XIj" userLabel="Trophy Button">
