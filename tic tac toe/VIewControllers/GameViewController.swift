@@ -28,13 +28,26 @@ final class GameViewController: UIViewController {
     private let gameIsOver = "Game is over"
     private var boardState = [Player?](repeating: nil, count: 9)
     
+    private let data = DataBase.shared
+    
     // MARK: - Public properties
     var playerOne: String?
     var playerTwo: String?
     
+    var playerData: [String : Int] = [:]
+    
+    
     // MARK: - Overrides
     override func viewDidLoad() {
+        super.viewDidLoad()
         setupView()
+        
+        playerData = [playerOne! : 0, playerTwo! : 0]
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        data.compareAndUpdate(with: playerData)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -61,9 +74,11 @@ final class GameViewController: UIViewController {
         if checkForWinner() == .player1 {
             showAlert(with: playerOneWins, and: gameIsOver)
             updateScore(for: playerOneScore)
+            playerData[playerOne!]! += 1
         } else if checkForWinner() == .player2 {
             showAlert(with: playerTwoWins, and: gameIsOver)
             updateScore(for: playerTwoScore)
+            playerData[playerTwo!]! += 1
         } else if checkBoardIsFull() {
             showAlert(with: draw, and: gameIsOver)
         }
@@ -74,15 +89,7 @@ final class GameViewController: UIViewController {
     }
     
     @IBAction func switchScreen(_ sender: UIButton) {
-        let tag = sender.tag
-        switch tag {
-        case 10:
-            print("Переход на в главное меню")
-            // Тут надо сделать сегвей
-        default:
-            print("Переход на таблицу лидеров")
-            // Тут надо сделать сегвей
-        }
+        
     }
     // MARK: - Private funcs
     private func setupView() {
@@ -113,21 +120,6 @@ final class GameViewController: UIViewController {
         playerTurnLabel.textColor = isXNotNil ? UIColor.systemBlue : UIColor.red
         currentPlayer = isXNotNil ? .player2 : .player1
     }
-//    private func takeTurn(x: UIView? = nil, o: UIView? = nil, button: UIButton) {
-//        x?.isHidden = false
-//        o?.isHidden = false
-//
-//        button.isUserInteractionEnabled = false
-//
-//        let isXNotNil = x != nil
-//
-//        playerTurnLabel.text = isXNotNil ? "Ход \(playerTwo ?? "123") ❌ " : "Ход \(playerOne ?? "123") ⭕️"
-//        playerTurnLabel.textColor = isXNotNil ? UIColor.systemBlue : UIColor.blue
-//        currentPlayer = isXNotNil ? .player2 : .player1
-//        
-//        let oLabel = UILabel()
-//        oLabel.text = "О"
-//        oLabel.textColor = UIColor.systemBlue
 
     
     private func checkForWinner() -> Player? {
