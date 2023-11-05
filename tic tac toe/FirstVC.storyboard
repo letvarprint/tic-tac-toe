@@ -37,7 +37,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="162.5" id="daU-sr-d7n"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Таблица лидеров"/>
+                                <buttonConfiguration key="configuration" style="gray" title="История игр"/>
                                 <connections>
                                     <segue destination="BmW-bM-Gqr" kind="presentation" identifier="list" modalPresentationStyle="fullScreen" id="JFO-Fp-aEY"/>
                                 </connections>
