@@ -7,6 +7,8 @@ final class GameViewController: UIViewController {
     @IBOutlet weak var playerTwoLabel: UILabel!
     @IBOutlet weak var playerTurnLabel: UILabel!
     
+    @IBOutlet weak var playerTurnImageView: UIImageView!
+    
     @IBOutlet weak var playerOneScore: UILabel!
     @IBOutlet weak var playerTwoScore: UILabel!
     
@@ -97,7 +99,8 @@ final class GameViewController: UIViewController {
         playerTwoLabel.text = playerTwo
         playerOneWins = "\(playerOne ?? "123") wins"
         playerTwoWins = "\(playerTwo ?? "123") wins"
-        playerTurnLabel.text = "Ход \(playerOne ?? "123") ❌"
+        playerTurnLabel.text = "Ход \(playerOne ?? "123")"
+        playerTurnImageView.image = UIImage(named: "Image-3")
         
         for button in buttons {
             button.layer.borderWidth = 3.0
@@ -116,9 +119,10 @@ final class GameViewController: UIViewController {
         
         let isXNotNil = x != nil
         
-        playerTurnLabel.text = isXNotNil ? "Ход \(playerTwo ?? "123") ⭕️ " : "Ход \(playerOne ?? "123") ❌"
+        playerTurnLabel.text = isXNotNil ? "Ход \(playerTwo ?? "123")" : "Ход \(playerOne ?? "123")"
         playerTurnLabel.textColor = isXNotNil ? UIColor.systemBlue : UIColor.red
         currentPlayer = isXNotNil ? .player2 : .player1
+        playerTurnImageView.image = isXNotNil ? UIImage(named: "Image-4") : UIImage(named: "Image-3")
     }
 
     
@@ -159,8 +163,9 @@ final class GameViewController: UIViewController {
         }
         boardState = [Player?](repeating: nil, count: 9)
         currentPlayer = .player1
-        playerTurnLabel.text = "Ход \(playerOne ?? "123") ❌"
+        playerTurnLabel.text = "Ход \(playerOne ?? "123")"
         playerTurnLabel.textColor = UIColor.red
+        playerTurnImageView.image = UIImage(named: "Image-3")
     }
     
     private func updateScore(for player: UILabel) {
