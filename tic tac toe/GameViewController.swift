@@ -76,7 +76,6 @@ final class GameViewController: UIViewController {
         case 10:
             print("Переход на в главное меню")
             // Тут надо сделать сегвей
-//            performSegue(withIdentifier: "toHome", sender: self)
         default:
             print("Переход на таблицу лидеров")
             // Тут надо сделать сегвей
