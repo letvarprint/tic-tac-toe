@@ -76,6 +76,7 @@ final class GameViewController: UIViewController {
         case 10:
             print("Переход на в главное меню")
             // Тут надо сделать сегвей
+//            performSegue(withIdentifier: "toHome", sender: self)
         default:
             print("Переход на таблицу лидеров")
             // Тут надо сделать сегвей
@@ -91,7 +92,7 @@ final class GameViewController: UIViewController {
         
         let isXNotNil = x != nil
         
-        playerTurnLabel.text = isXNotNil ? "Ход \(playerTwo ?? "123") ❌ " : "Ход \(playerOne ?? "123") ⭕️"
+        playerTurnLabel.text = isXNotNil ? "Ход \(playerTwo ?? "123") ⭕️ " : "Ход \(playerOne ?? "123") ❌"
         playerTurnLabel.textColor = isXNotNil ? UIColor.systemBlue : UIColor.red
         currentPlayer = isXNotNil ? .player2 : .player1
     }
@@ -149,7 +150,7 @@ final class GameViewController: UIViewController {
         }
         boardState = [Player?](repeating: nil, count: 9)
         currentPlayer = .player1
-        playerTurnLabel.text = "Ход Player 1"
+        playerTurnLabel.text = "Ход \(playerOne ?? "123") ❌"
         playerTurnLabel.textColor = UIColor.red
     }
     
@@ -162,6 +163,8 @@ final class GameViewController: UIViewController {
         playerTwoLabel.text = playerTwo
         playerOneWins = "\(playerOne ?? "123") wins"
         playerTwoWins = "\(playerTwo ?? "123") wins"
+        playerTurnLabel.text = "Ход \(playerOne ?? "123") ❌"
+        
         for button in buttons {
             button.layer.borderWidth = 3.0
             button.layer.borderColor = UIColor.black.cgColor
@@ -201,7 +204,9 @@ extension GameViewController {
         )
         
         let returnAction = UIAlertAction(title: "Сыграть снова", style: .default) { _ in self.resetGame()}
-        let playAgainAction = UIAlertAction(title: "Главное меню", style: .default)
+        let playAgainAction = UIAlertAction(title: "Главное меню", style: .default, handler: { homeButton in
+            self.performSegue(withIdentifier: "toHome", sender: self)})
+
         
         
         alert.addAction(returnAction)
