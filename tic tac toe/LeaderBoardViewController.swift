@@ -8,39 +8,36 @@
 import UIKit
 
 final class LeaderBoardViewController: UIViewController {
-
-    var model: ChoiсePlayer!
+    // MARK: - Public properties
+    var playerOne: String!
+    var playerTwo: String!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    // MARK: - IBAcations
     @IBAction func homeButtonClick(_ sender: UIButton) {
         performSegue(withIdentifier: "goHome", sender: self)
     }
-    
 }
 
 extension LeaderBoardViewController: UITableViewDelegate,UITableViewDataSource {
+    
+    // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    10
+        1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "leaderCell", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        content.text = "❌ \(playerOne ?? "") vs ⭕️ \(playerTwo ?? "")"
+        cell.contentConfiguration = content
         return cell
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        "История игр"
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

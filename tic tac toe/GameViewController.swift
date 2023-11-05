@@ -2,6 +2,7 @@ import UIKit
 
 final class GameViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var playerOneLabel: UILabel!
     @IBOutlet weak var playerTwoLabel: UILabel!
     @IBOutlet weak var playerTurnLabel: UILabel!
@@ -18,6 +19,7 @@ final class GameViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var leaderboardButton: UIButton!
     
+    // MARK: - Private properties
     private var currentPlayer: Player = .player1
     
     private var playerOneWins: String!
@@ -26,18 +28,19 @@ final class GameViewController: UIViewController {
     private let gameIsOver = "Game is over"
     private var boardState = [Player?](repeating: nil, count: 9)
     
-    var model: ChoiсePlayer!
-    
+    // MARK: - Public properties
     var playerOne: String?
     var playerTwo: String?
     
+    // MARK: - Overrides
     override func viewDidLoad() {
         setupView()
-        
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let leaderVC = segue.destination as? LeaderBoardViewController else { return }
-        leaderVC.model = model
+        leaderVC.playerOne = playerOne
+        leaderVC.playerTwo = playerTwo
     }
 //MARK: - IBAction
     @IBAction func makeGameAction(_ sender: UIButton) {
@@ -81,7 +84,22 @@ final class GameViewController: UIViewController {
             // Тут надо сделать сегвей
         }
     }
-    
+    // MARK: - Private funcs
+    private func setupView() {
+        playerOneLabel.text = playerOne
+        playerTwoLabel.text = playerTwo
+        playerOneWins = "\(playerOne ?? "123") wins"
+        playerTwoWins = "\(playerTwo ?? "123") wins"
+        playerTurnLabel.text = "Ход \(playerOne ?? "123") ❌"
+        
+        for button in buttons {
+            button.layer.borderWidth = 3.0
+            button.layer.borderColor = UIColor.black.cgColor
+        }
+        homeButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        resetButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        leaderboardButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+    }
 //MARK: - MainGameLogic
     private func takeTurn(x: UIView? = nil, o: UIView? = nil, button: UIButton) {
         x?.isHidden = false
@@ -91,7 +109,7 @@ final class GameViewController: UIViewController {
         
         let isXNotNil = x != nil
         
-        playerTurnLabel.text = isXNotNil ? "Ход \(playerTwo ?? "123") ❌ " : "Ход \(playerOne ?? "123") ⭕️"
+        playerTurnLabel.text = isXNotNil ? "Ход \(playerTwo ?? "123") ⭕️ " : "Ход \(playerOne ?? "123") ❌"
         playerTurnLabel.textColor = isXNotNil ? UIColor.systemBlue : UIColor.red
         currentPlayer = isXNotNil ? .player2 : .player1
     }
@@ -149,7 +167,7 @@ final class GameViewController: UIViewController {
         }
         boardState = [Player?](repeating: nil, count: 9)
         currentPlayer = .player1
-        playerTurnLabel.text = "Ход Player 1"
+        playerTurnLabel.text = "Ход \(playerOne ?? "123") ❌"
         playerTurnLabel.textColor = UIColor.red
     }
     
@@ -157,19 +175,7 @@ final class GameViewController: UIViewController {
         player.text = String((Int(player.text ?? "0") ?? 0) + 1)
     }
     
-    private func setupView() {
-        playerOneLabel.text = playerOne
-        playerTwoLabel.text = playerTwo
-        playerOneWins = "\(playerOne ?? "123") wins"
-        playerTwoWins = "\(playerTwo ?? "123") wins"
-        for button in buttons {
-            button.layer.borderWidth = 3.0
-            button.layer.borderColor = UIColor.black.cgColor
-        }
-        homeButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
-        resetButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
-        leaderboardButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
-    }
+   
 //MARK: - ButtonAnimation
     @objc func buttonPressed(_ sender: UIButton) {
         UIView.animate(withDuration: 0.15, animations: {
@@ -201,7 +207,9 @@ extension GameViewController {
         )
         
         let returnAction = UIAlertAction(title: "Сыграть снова", style: .default) { _ in self.resetGame()}
-        let playAgainAction = UIAlertAction(title: "Главное меню", style: .default)
+        let playAgainAction = UIAlertAction(title: "Главное меню", style: .default, handler: { homeButton in
+            self.performSegue(withIdentifier: "toHome", sender: self)})
+
         
         
         alert.addAction(returnAction)

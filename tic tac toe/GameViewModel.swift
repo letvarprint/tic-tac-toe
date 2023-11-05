@@ -23,8 +23,9 @@ struct GameModel {
 }
 
 struct LeaderBoard {
-    let winerName: String
-    let score: Int
+    let playerOne: String
+    let playerTwo: String
+    let gameScore: String
 }
 
 extension ChoiсePlayer {
@@ -50,11 +51,6 @@ extension GameModel {
 
 extension LeaderBoard {
     static func getLeader() -> LeaderBoard {
-        LeaderBoard(winerName: "", score: 0)
+        LeaderBoard(playerOne: "", playerTwo: "", gameScore: "")
     }
-}
-
-enum Players {
-    case player1
-    case player2
 }
