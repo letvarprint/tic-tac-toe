@@ -95,6 +95,22 @@ final class GameViewController: UIViewController {
         playerTurnLabel.textColor = isXNotNil ? UIColor.systemBlue : UIColor.red
         currentPlayer = isXNotNil ? .player2 : .player1
     }
+//    private func takeTurn(x: UIView? = nil, o: UIView? = nil, button: UIButton) {
+//        x?.isHidden = false
+//        o?.isHidden = false
+//
+//        button.isUserInteractionEnabled = false
+//
+//        let isXNotNil = x != nil
+//
+//        playerTurnLabel.text = isXNotNil ? "Ход \(playerTwo ?? "123") ❌ " : "Ход \(playerOne ?? "123") ⭕️"
+//        playerTurnLabel.textColor = isXNotNil ? UIColor.systemBlue : UIColor.blue
+//        currentPlayer = isXNotNil ? .player2 : .player1
+//        
+//        let oLabel = UILabel()
+//        oLabel.text = "О"
+//        oLabel.textColor = UIColor.systemBlue
+
     
     private func checkForWinner() -> Player? {
         let winPatterns: [[Int]] = [

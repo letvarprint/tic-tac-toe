@@ -55,6 +55,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XEo-p4-zLP">
+                        <barButtonItem key="leftBarButtonItem" title="Создатели" id="UWM-bg-3gA">
+                            <connections>
+                                <action selector="createPersonList:" destination="Qza-X2-Z5i" id="jeU-Dq-XtM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Правила" id="Jnn-E3-eTn">
                             <connections>
                                 <action selector="rulesButton:" destination="Qza-X2-Z5i" id="bPb-WB-7LE"/>
