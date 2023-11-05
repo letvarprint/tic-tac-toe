@@ -7,12 +7,15 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+final class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-   
+       
+    @IBAction func createPersonList(_ sender: UIBarButtonItem) {
+        alert(title: "Создатели игры TicTacToe", message: "\nTeamLeader Alex \nDaniel Romanov \nSsemyon shevchik \nDmitriy Lebedev \n")
+    }
     
     @IBAction func buttonGame() {
     }
@@ -32,5 +35,7 @@ class FirstViewController: UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+    
   
+    
 }

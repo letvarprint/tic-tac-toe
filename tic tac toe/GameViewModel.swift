@@ -7,20 +7,54 @@
 
 import Foundation
 
+struct ChoiсePlayer {
+    let playerOneTF: String
+    let playerTwoTF: String
+    let game: GameModel
+
+}
 struct GameModel {
     let playerOne: String
     let playerTwo: String
-    let playerCrossImage: String
-    let playerRingImage: String
     let currentMove: String
-}
-
-struct ChoiсePlayer {
-    let playerOne: String
-    let playerTwo: String
+    let playerOneScore: Int
+    let playerTwoScore: Int
+    let leaderBoard: LeaderBoard
 }
 
 struct LeaderBoard {
-    let nickname: String
+    let winerName: String
     let score: Int
+}
+
+extension ChoiсePlayer {
+   static func getModel() -> ChoiсePlayer {
+        ChoiсePlayer(
+            playerOneTF: "123",
+            playerTwoTF: "123",
+            game: GameModel.getGameModel())
+    }
+}
+extension GameModel {
+    static func getGameModel() -> GameModel {
+        GameModel(
+            playerOne: "123",
+            playerTwo: "123",
+            currentMove: "",
+            playerOneScore: 0,
+            playerTwoScore: 0,
+            leaderBoard: LeaderBoard.getLeader()
+        )
+    }
+}
+
+extension LeaderBoard {
+    static func getLeader() -> LeaderBoard {
+        LeaderBoard(winerName: "", score: 0)
+    }
+}
+
+enum Players {
+    case player1
+    case player2
 }
