@@ -12,6 +12,8 @@ final class LeaderBoardViewController: UIViewController {
     var model: ChoiсePlayer!
     
     var gameHistories: [String:String] = [:]
+    var players: String!
+    var howWins: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,7 @@ final class LeaderBoardViewController: UIViewController {
     }
     
 //    private func addHistories() -> [String:String] {
-//        gameHistories.key
+//
 //    }
 }
 

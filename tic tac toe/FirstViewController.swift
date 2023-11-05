@@ -9,18 +9,8 @@ import UIKit
 
 final class FirstViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-       
     @IBAction func createPersonList(_ sender: UIBarButtonItem) {
-        alert(title: "Создатели игры TicTacToe", message: "\nTeamLeader Alex \nDaniel Romanov \nSsemyon shevchik \nDmitriy Lebedev \n")
-    }
-    
-    @IBAction func buttonGame() {
-    }
-    
-    @IBAction func tableLeaders() {
+        alert(title: "Создатели игры TicTacToe", message: "\nTeamLeader Alex \nDaniel Romanov \nSemyon Shevchik \nDmitriy Lebedev")
     }
     
     @IBAction func rulesButton(_ sender: UIBarButtonItem) {

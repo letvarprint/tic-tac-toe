@@ -28,7 +28,6 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonGame" destination="Qza-X2-Z5i" eventType="touchUpInside" id="G3S-ED-bgI"/>
                                     <segue destination="4jj-9d-r4J" kind="show" id="87h-jo-ZTh"/>
                                 </connections>
                             </button>
@@ -40,7 +39,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Таблица лидеров"/>
                                 <connections>
-                                    <action selector="tableLeaders" destination="Qza-X2-Z5i" eventType="touchUpInside" id="bJo-qb-qnR"/>
                                     <segue destination="BmW-bM-Gqr" kind="presentation" identifier="list" modalPresentationStyle="fullScreen" id="JFO-Fp-aEY"/>
                                 </connections>
                             </button>
@@ -96,7 +94,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="uRa-c5-AcQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Two" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jio-3H-4qw">
                                         <rect key="frame" x="0.0" y="58" width="220" height="34"/>
@@ -104,7 +102,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="pId-4i-DX3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                 </subviews>
                             </stackView>
