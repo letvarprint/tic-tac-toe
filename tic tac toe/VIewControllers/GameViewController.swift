@@ -43,7 +43,10 @@ final class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         playerData = [playerOne! : 0, playerTwo! : 0]
     }
     
